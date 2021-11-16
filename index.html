@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<title>Ejercicios DOM 03</title>
+</head>
+<body>
+	<div class="contenedor">
+		<div class="contenedor-ejercicios">
+			<div class="back-to-top" id="toTop" title="Back to top">
+				<span><i class="fas fa-chevron-up"></i></span>
+			</div>
+			<div class="presentacion">
+				<h1>Ejercicio DOM 03</h1>
+			</div>
+			<div class="ejercicio uno">
+				<h3>Ejercicio 1</h3>
+				<button class="btn" id="btnToggle">Mostrar</button>
+				<div class="contenido d-none" id="contenido">
+					<h4>Hola.</h4>
+				</div>
+			</div>
+			<div class="ejercicio dos">
+				<h3>Ejercicio 2</h3>
+				<input type="text" class="input" placeholder="Tarea" id="inputAddTask">
+				<br>
+				<button class="btn" id="btnAddTask">Agregar tarea</button>
+				<ul class="tasks" id="tasks">
+					<li>Listado de tareas</li>
+				</ul>
+			</div>
+			<div class="ejercicio tres">
+				<h3>Ejercicio 3</h3>
+				<div class="saludo" id="saludo"></div>
+			</div>
+			<div class="ejercicio cuatro">
+				<h3>Ejercicio 4</h3>
+				<div class="change-container" id="changeContainer">
+					<div class="botones">
+						<button class="btn" id="btnChange1">Bg Red</button>
+						<button class="btn" id="btnChangeReset">Reset</button>
+					</div>
+				</div>
+			</div>
+			<div class="ejercicio cuatro">
+				<h3>Ejercicio 5</h3>
+				<div class="form-container" id="formContainer"></div>
+			</div>
+		</div>
+	</div>
+	<script src="js/main.js"></script>
+</body>
+</html>
