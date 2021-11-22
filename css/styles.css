@@ -38,6 +38,14 @@ ul {
 	list-style: none;
 }
 
+i {
+	margin: 0 10px;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
 .contenedor {
 	background-color: lightblue;
 	position: relative;
@@ -136,6 +144,14 @@ ul {
 	animation: showel 2s;
 }
 
+.showitem {
+	animation: showitem 2s;
+}
+
+.hideitem {
+	animation: hideitem 2s;
+}
+
 .rotate {
 	animation: rotation 2s;
 	animation-timing-function: linear;
@@ -177,6 +193,14 @@ ul.tasks > li {
 
 ul.tasks li:first-child {
 	border-bottom: 1px solid #ccc;
+}
+
+.deleteTask {
+	transition: all .2s ease;
+}
+
+.deleteTask:hover {
+	color: rgba(255,0,0,0.5);
 }
 
 /* 3 */
@@ -283,6 +307,41 @@ ul.tasks li:first-child {
 		-webkit-transform: translateX(200%);
 		background-color: var(--bg-hide-100);
 		opacity: 0.2;
+	}
+}
+
+@keyframes showitem {
+	0% {
+		opacity: 0.2;
+	}
+	50% {
+		transform: translateY(5px);
+		-webkit-transform: translateY(5px);
+		opacity: 0.6;
+	}
+	100% {
+		transform: translateY(0);
+		-webkit-transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes hideitem {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		transform: translateY(5px);
+		-webkit-transform: translateY(5px);
+		opacity: 0.6;
+	}
+	75% {
+		opacity: 0.2;
+	}
+	100% {
+		transform: translateY(-200px);
+		-webkit-transform: translateY(-200px);
+		opacity: 0;
 	}
 }
 

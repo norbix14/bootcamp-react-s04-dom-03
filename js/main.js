@@ -22,9 +22,20 @@ document.addEventListener('DOMContentLoaded', () => {
 		const value = inputAddTask.value
 		const li = document.createElement('LI')
 		if (value.trim() === '') return alert('Ingresá una tarea válida')
-		li.innerText = value
+		li.innerHTML = `${value} <i class="fas fa-times pointer deleteTask" title="Borrar tarea"></i>`
+		li.classList.add('showitem')
 		tasks.appendChild(li)
 		inputAddTask.value = ''
+	})
+
+	document.addEventListener('click', e => {
+		const { target: { tagName, classList, parentElement: liChild } } = e
+		if (tagName === 'I') {
+			if (Array.from(classList).includes('deleteTask')) {
+				liChild.classList.add('hideitem')
+				setTimeout(() => liChild.parentElement.removeChild(liChild), 2000)
+			}
+		}
 	})
 
 	greetingContainer.innerHTML = `<h3>Hola. Saludos en este año ${new Date().getFullYear()}</h3>`
